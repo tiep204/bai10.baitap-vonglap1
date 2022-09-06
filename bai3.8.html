@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>game doan so</title>
+</head>
+<body>
+<button onclick="choi()">STAR</button>
+
+<h1>Đoán Số </h1>
+<button id="play" onclick="play()">Chơi</button>
+<input type="number" id="vip">
+<script>
+    var count = 0;
+
+    function play() {
+        // let min = +prompt('Đoán số trong khoảng từ: ')
+        // let max = +prompt('Đến:')
+        count++;
+        let input = +document.getElementById('vip').value;
+        console.log("input=============", input)
+        let ran = Math.floor(Math.random() * 10 + 1)
+        console.log("ran=========", ran);
+        if (count < 4) {
+            if (input === ran) {
+                alert('Win')
+            } else {
+                alert('ngu, Mày còn số lượt chơi là :' + (3 - count))
+            }
+        } else
+            alert('Hết lượt chơi')
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<h1  style=" text-align: center ">Bảng cửu chương</h1>
+<body>
+<table border="1" width="200" style="margin-left: 400px">
+  <script>
+    let bangCuChuong='';
+    for (let i = 0; i<=10; i++) {
+      bangCuChuong += '<tr>'
+      for(let j=1;j<=10;j++){
+        bangCuChuong+='<td>' + 1 + 'x' + j + '=' + i * j + '<br>'+'</td>'
+      }
+      bangCuChuong += '</tr>'
+    }
+    document.write(bangCuChuong)
+  </script>
+</table>
+</body>
+</html>

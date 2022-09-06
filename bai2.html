@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>so nguyen to</title>
+</head>
+<body>
+Hiển thị N số nguyên tố đầu tiên
+<br><br>
+Nhập n: <input type="number" id="n" min="0">
+<br><br>
+<button onclick="print()">In</button>
+<p id="result">Kết quả: </p>
+
+<script>
+    function print() {
+        document.getElementById('result').innerHTML = 'Kết quả: ';
+        let count = 0;
+        let N = 2;
+        let number = +document.getElementById('n').value;
+        while (count < number) {
+            check = false;
+            for (let i = 2; i < N; i++) {
+                console.log("i===========",i)
+                if (N % i == 0) {
+                    console.log("N============",N)
+                    check = true;
+                }
+            }
+            if (!check) {
+                document.getElementById('result').innerHTML += (N + ', ');
+                count++;
+            }
+            console.log("count========",count)
+            N++;
+        }
+    }
+
+</script>
+</body>
+</html>
